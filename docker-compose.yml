@@ -1,0 +1,12 @@
+version: '3'
+services:
+  circuitjs1:
+  # TAGS: 'latest', 'stable' or dedicated git commit hash 
+    image: ghcr.io/tna76874/circuitjs1:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+      - "9876:9876"
+    container_name: circuitjs1-container
